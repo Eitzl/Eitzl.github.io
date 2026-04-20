@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writings &mdash; Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .post-list {
+      list-style: none;
+    }
+
+    .post-item {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .post-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .post-title {
+      font-size: 0.975rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .post-title:hover {
+      color: var(--accent);
+    }
+
+    .post-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .reading-card {
+      border-left: 3px solid var(--accent);
+      background: var(--bg-card);
+      border-radius: 0 6px 6px 0;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .reading-card .rc-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .reading-card .rc-author {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .reading-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html" class="active">Writings</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>Writings</h1>
+  <p>Essays and notes on history, politics, and related topics.</p>
+
+  <hr class="divider" />
+
+  <h3>Essays</h3>
+  <ul class="post-list">
+    <li class="post-item">
+      <a class="post-title" href="#">
+        Essay Placeholder &mdash; History / Politics Topic
+      </a>
+      <span class="post-date">Coming soon</span>
+    </li>
+    <li class="post-item">
+      <a class="post-title" href="#">
+        Essay Placeholder &mdash; Another Topic
+      </a>
+      <span class="post-date">Coming soon</span>
+    </li>
+  </ul>
+
+  <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);">
+    [To add a post: copy one of the <code>&lt;li&gt;</code> entries above,
+    update the title and date, and point <code>href</code> to your post file.]
+  </p>
+
+  <hr class="divider" />
+
+  <h3>Currently Reading</h3>
+
+  <div class="reading-card">
+    <div class="rc-title">[Book Title Placeholder]</div>
+    <div class="rc-author">[Author Name]</div>
+    <p>[A sentence or two on what the book is about and why you picked it up.]</p>
+  </div>
+
+  <h3>Recommended Reading</h3>
+
+  <div class="reading-card">
+    <div class="rc-title">[Recommended Title Placeholder]</div>
+    <div class="rc-author">[Author Name]</div>
+    <p>[Why you recommend it and who might enjoy it.]</p>
+  </div>
+
+  <div class="reading-card">
+    <div class="rc-title">[Recommended Title Placeholder]</div>
+    <div class="rc-author">[Author Name]</div>
+    <p>[Why you recommend it and who might enjoy it.]</p>
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

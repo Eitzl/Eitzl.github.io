@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>About</h1>
+
+  <!-- Dynamic academic status widget -->
+  <div class="status-widget" id="academic-status">
+    <div class="status-item">
+      <span class="status-dot"></span>
+      <span class="status-label">Year:</span>
+      <span class="status-value" id="sw-year">&hellip;</span>
+    </div>
+    <span class="status-sep">/</span>
+    <div class="status-item">
+      <span class="status-label">Quarter:</span>
+      <span class="status-value" id="sw-quarter">&hellip;</span>
+    </div>
+    <span class="status-sep">/</span>
+    <div class="status-item">
+      <span class="status-label">Week:</span>
+      <span class="status-value" id="sw-week">&hellip;</span>
+    </div>
+  </div>
+
+  <p>
+    Hi &mdash; I'm Evan Fitzhugh, an undergraduate at UC Santa Cruz studying
+    biology and bioinformatics. I'm interested in how computational tools
+    can be applied to problems in the natural sciences, from genomics to
+    atmospheric prediction.
+  </p>
+  <p>
+    Outside of coursework I spend time on programming projects, reading history
+    and political theory, and occasionally writing about both.
+  </p>
+  <p>
+    [Add more about yourself here &mdash; research interests, hobbies, goals, etc.]
+  </p>
+
+  <hr class="divider" />
+
+  <h2>Background</h2>
+  <p>
+    [Placeholder &mdash; hometown, prior experience, what drew you to biology/bioinformatics, etc.]
+  </p>
+
+  <h2>Interests</h2>
+  <p>
+    [Placeholder &mdash; specific subfields, topics you enjoy outside of academics, etc.]
+  </p>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── UCSC Academic Status Calculator ──
+  // Evan started as a freshman in Fall 2024.
+  // Quarters: Fall (late Sept), Winter (early Jan), Spring (late Mar).
+  // Summer is skipped. Year standing advances every 3 completed quarters.
+  (function () {
+    // Approximate first-day-of-instruction for each quarter.
+    // These are typical UCSC dates; update if the registrar shifts them.
+    const QUARTERS = [
+      { name: 'Fall',   year: 2024, start: [2024,  8, 26], end: [2024, 11, 13] },
+      { name: 'Winter', year: 2025, start: [2025,  0,  6], end: [2025,  2, 21] },
+      { name: 'Spring', year: 2025, start: [2025,  2, 31], end: [2025,  5, 13] },
+      { name: 'Fall',   year: 2025, start: [2025,  8, 25], end: [2025, 11, 12] },
+      { name: 'Winter', year: 2026, start: [2026,  0,  5], end: [2026,  2, 20] },
+      { name: 'Spring', year: 2026, start: [2026,  2, 30], end: [2026,  5, 12] },
+      { name: 'Fall',   year: 2026, start: [2026,  8, 24], end: [2026, 11, 11] },
+      { name: 'Winter', year: 2027, start: [2027,  0,  4], end: [2027,  2, 19] },
+      { name: 'Spring', year: 2027, start: [2027,  2, 29], end: [2027,  5, 11] },
+      { name: 'Fall',   year: 2027, start: [2027,  8, 23], end: [2027, 11, 10] },
+      { name: 'Winter', year: 2028, start: [2028,  0,  3], end: [2028,  2, 17] },
+      { name: 'Spring', year: 2028, start: [2028,  2, 27], end: [2028,  5,  9] },
+    ];
+    const YEAR_NAMES = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
+
+    function toDate(arr) {
+      return new Date(arr[0], arr[1], arr[2]);
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let currentQ = null;
+    let completedCount = 0;
+
+    for (const q of QUARTERS) {
+      const start = toDate(q.start);
+      const end = toDate(q.end);
+
+      if (today >= start && today <= end) {
+        currentQ = { ...q, startDate: start };
+      } else if (today > end) {
+        completedCount++;
+      }
+    }
+
+    // Year standing: advances every 3 completed quarters
+    const yearIndex = Math.min(Math.floor(completedCount / 3), 3);
+    const yearName = YEAR_NAMES[yearIndex];
+
+    let quarterStr = '—';
+    let weekStr = '—';
+
+    if (currentQ) {
+      quarterStr = currentQ.name + ' ' + currentQ.year;
+      const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+      const week = Math.min(Math.ceil((today - currentQ.startDate) / msPerWeek), 10);
+      weekStr = week <= 0 ? '1' : String(week);
+    } else {
+      // Between quarters (finals week, break, etc.)
+      quarterStr = 'Break';
+    }
+
+    document.getElementById('sw-year').textContent = yearName;
+    document.getElementById('sw-quarter').textContent = quarterStr;
+    document.getElementById('sw-week').textContent = weekStr === '—' ? weekStr : 'Week ' + weekStr;
+  })();
+</script>
+
+</body>
+</html>

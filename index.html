@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="hero">
+    <div class="img-placeholder" title="Photo placeholder">
+      &#9786;
+    </div>
+    <div class="hero-text">
+      <h1>Evan Fitzhugh</h1>
+      <p class="subtitle">Student &mdash; UC Santa Cruz</p>
+      <p>
+        Studying biology and bioinformatics. Interested in atmospheric science,
+        computational methods, and writing about history and politics.
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <h3>Explore</h3>
+  <div class="page-grid">
+    <a class="page-tile" href="about.html">
+      <div class="page-tile-title">About</div>
+      <div class="page-tile-desc">Background, interests, and academic standing</div>
+    </a>
+    <a class="page-tile" href="projects.html">
+      <div class="page-tile-title">Projects</div>
+      <div class="page-tile-desc">Programming work, including the SSW prediction project</div>
+    </a>
+    <a class="page-tile" href="writings.html">
+      <div class="page-tile-title">Writings</div>
+      <div class="page-tile-desc">Essays on history, politics, and related reading</div>
+    </a>
+    <a class="page-tile" href="contact.html">
+      <div class="page-tile-title">Contact</div>
+      <div class="page-tile-desc">Email, GitHub, and LinkedIn</div>
+    </a>
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
