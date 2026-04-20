@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume &mdash; Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .resume-section {
+      margin-bottom: 2rem;
+    }
+
+    .resume-entry {
+      margin-bottom: 1.4rem;
+    }
+
+    .resume-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.15rem;
+    }
+
+    .resume-entry-title {
+      font-weight: 600;
+      font-size: 0.975rem;
+      color: var(--text);
+    }
+
+    .resume-entry-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .resume-entry-sub {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .resume-entry ul {
+      padding-left: 1.2rem;
+      margin-top: 0.25rem;
+    }
+
+    .resume-entry li {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skills-group-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .skills-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-group li {
+      font-size: 0.9rem;
+      color: var(--text);
+      padding: 0.15rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-group li:last-child {
+      border-bottom: none;
+    }
+
+    .pdf-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .pdf-banner a {
+      font-weight: 600;
+    }
+
+    .pdf-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .pdf-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>Resume</h1>
+
+  <!-- PDF download / link banner -->
+  <div class="pdf-banner">
+    <span class="pdf-icon">&#128196;</span>
+    <div>
+      <a href="resume.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
+      <div class="pdf-note">
+        [Replace <code>resume.pdf</code> with a link to your hosted PDF, or upload
+        <code>resume.pdf</code> to this repository.]
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Education -->
+  <div class="resume-section">
+    <h3>Education</h3>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span class="resume-entry-title">University of California, Santa Cruz</span>
+        <span class="resume-entry-date">Sep 2024 &ndash; Present</span>
+      </div>
+      <div class="resume-entry-sub">B.S. Biotechnology &nbsp;&middot;&nbsp; B.A. History &nbsp;&middot;&nbsp; Double Major</div>
+      <ul>
+        <li>[Relevant coursework, honors, or GPA if desired]</li>
+        <li>[Clubs, organizations, or activities]</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span class="resume-entry-title">[High School Name] &mdash; Berkeley, CA</span>
+        <span class="resume-entry-date">Graduated [Year]</span>
+      </div>
+      <div class="resume-entry-sub">[Diploma type, any relevant distinctions]</div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Experience -->
+  <div class="resume-section">
+    <h3>Experience &amp; Positions</h3>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span class="resume-entry-title">SSW Prediction Project</span>
+        <span class="resume-entry-date">[Start Date] &ndash; Present</span>
+      </div>
+      <div class="resume-entry-sub">Independent Research &nbsp;&middot;&nbsp; UC Santa Cruz</div>
+      <ul>
+        <li>Developing machine learning models to predict Sudden Stratospheric
+            Warming events and atmospheric river activity.</li>
+        <li>[Add additional details: datasets used, methods, outcomes, collaborators.]</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span class="resume-entry-title">[Position Title Placeholder]</span>
+        <span class="resume-entry-date">[Dates]</span>
+      </div>
+      <div class="resume-entry-sub">[Organization] &nbsp;&middot;&nbsp; [Location]</div>
+      <ul>
+        <li>[Responsibility or achievement]</li>
+        <li>[Responsibility or achievement]</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span class="resume-entry-title">[Position Title Placeholder]</span>
+        <span class="resume-entry-date">[Dates]</span>
+      </div>
+      <div class="resume-entry-sub">[Organization] &nbsp;&middot;&nbsp; [Location]</div>
+      <ul>
+        <li>[Responsibility or achievement]</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Skills -->
+  <div class="resume-section">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <div class="skills-group-title">Programming</div>
+        <ul>
+          <li>Python</li>
+          <li>[Language]</li>
+          <li>[Language]</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Bioinformatics / Data</div>
+        <ul>
+          <li>[Tool / library]</li>
+          <li>[Tool / library]</li>
+          <li>[Tool / library]</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Tools &amp; Platforms</div>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>[Tool]</li>
+          <li>[Tool]</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Other</div>
+        <ul>
+          <li>[Skill]</li>
+          <li>[Skill]</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
