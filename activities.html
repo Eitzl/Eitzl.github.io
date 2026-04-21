@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activities &mdash; Evan Fitzhugh</title>
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,6 +20,10 @@
       <li><a href="activities.html" class="active">Activities</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-dot"></span>
+      <span class="toggle-label">light</span>
+    </button>
   </div>
 </nav>
 
@@ -96,6 +101,7 @@
   <a href="mailto:emfitzhu@ucsc.edu">emfitzhu@ucsc.edu</a>
 </footer>
 
+<script src="script.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>

@@ -1,12 +1,24 @@
 :root {
+  --bg: #0a0e1a;
+  --bg-card: #111928;
+  --bg-nav: #0d1428;
+  --text: #ffffff;
+  --muted: #b0bdd8;
+  --accent: #ff6b2b;
+  --accent-light: #ff8c55;
+  --border: #1e2d45;
+  --nav-height: 56px;
+}
+
+[data-theme="light"] {
   --bg: #fafaf8;
   --bg-card: #f4f4f0;
+  --bg-nav: #f0f0ec;
   --text: #1c1c1c;
   --muted: #6b7280;
-  --accent: #2d6a4f;
-  --accent-light: #40916c;
+  --accent: #d94f00;
+  --accent-light: #ff6b2b;
   --border: #ddddd8;
-  --nav-height: 56px;
 }
 
 *, *::before, *::after {
@@ -33,7 +45,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg);
+  background: var(--bg-nav);
   border-bottom: 1px solid var(--border);
   height: var(--nav-height);
   display: flex;
@@ -48,6 +60,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .nav-brand {
@@ -57,6 +70,7 @@ nav {
   color: var(--text);
   text-decoration: none;
   letter-spacing: 0.01em;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -71,11 +85,47 @@ nav {
   font-size: 0.875rem;
   letter-spacing: 0.02em;
   transition: color 0.15s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  color: var(--accent);
+}
+
 .nav-links a.active {
   color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Theme toggle ── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.toggle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 /* ── Main layout ── */
@@ -141,6 +191,16 @@ a:hover {
   border-radius: 6px;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: #15202f;
+}
+
+[data-theme="light"] .card:hover {
+  background: #eaeae6;
 }
 
 .card-title {
@@ -293,8 +353,12 @@ a:hover {
 
 .page-tile:hover {
   border-color: var(--accent);
-  background: #f0f7f4;
+  background: #15202f;
   color: var(--text);
+}
+
+[data-theme="light"] .page-tile:hover {
+  background: #eaeae6;
 }
 
 .page-tile-title {
@@ -395,6 +459,10 @@ footer a:hover {
   }
 
   .nav-links {
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .theme-toggle {
+    padding: 0.2rem 0.45rem;
   }
 }

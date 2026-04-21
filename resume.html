@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume &mdash; Evan Fitzhugh</title>
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
   <link rel="stylesheet" href="style.css" />
   <style>
     .resume-section {
@@ -124,6 +125,10 @@
       <li><a href="resume.html" class="active">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-dot"></span>
+      <span class="toggle-label">light</span>
+    </button>
   </div>
 </nav>
 
@@ -258,6 +263,7 @@
   &copy; <span id="year"></span> Evan Fitzhugh
 </footer>
 
+<script src="script.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
