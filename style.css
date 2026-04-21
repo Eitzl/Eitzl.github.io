@@ -240,6 +240,17 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* ── Hero profile photo ── */
+.hero-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  display: block;
+  flex-shrink: 0;
+}
+
 /* ── Home hero ── */
 .hero {
   display: flex;
@@ -327,6 +338,14 @@ a:hover {
   color: var(--muted);
 }
 
+/* ── Status last-updated ── */
+.status-updated {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /* ── Footer ── */
 footer {
   text-align: center;
@@ -334,6 +353,26 @@ footer {
   color: var(--muted);
   padding: 2rem;
   border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-sep {
+  color: var(--border);
+  user-select: none;
 }
 
 /* ── Responsive ── */

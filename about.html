@@ -43,6 +43,7 @@
       <span class="status-value" id="sw-week">&hellip;</span>
     </div>
   </div>
+  <p class="status-updated" id="status-updated"></p>
 
   <p>
     Hi, I'm Evan Fitzhugh &mdash; an undergraduate at UC Santa Cruz pursuing a
@@ -95,11 +96,17 @@
 </main>
 
 <footer>
-  &copy; <span id="year"></span> Evan Fitzhugh
+  <span>&copy; <span id="year"></span> Evan Fitzhugh</span>
+  <span class="footer-sep">&middot;</span>
+  <a href="https://github.com/Eitzl" target="_blank" rel="noopener">GitHub</a>
+  <span class="footer-sep">&middot;</span>
+  <a href="mailto:emfitzhu@ucsc.edu">emfitzhu@ucsc.edu</a>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('status-updated').textContent =
+    'Updated ' + new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
   // ── UCSC Academic Status Calculator ──
   // Evan started as a freshman in Fall 2024.

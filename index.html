@@ -24,9 +24,13 @@
 
 <main>
   <div class="hero">
-    <div class="img-placeholder" title="Photo placeholder">
-      &#9786;
-    </div>
+    <img
+      src="assets/photos/WIN_20250924_11_04_54_Pro.jpg"
+      alt="Evan Fitzhugh"
+      class="hero-img"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+    />
+    <div class="img-placeholder" style="display:none;" title="Photo placeholder">&#9786;</div>
     <div class="hero-text">
       <h1>Evan Fitzhugh</h1>
       <p class="subtitle">Student &mdash; UC Santa Cruz</p>
@@ -65,7 +69,11 @@
 </main>
 
 <footer>
-  &copy; <span id="year"></span> Evan Fitzhugh
+  <span>&copy; <span id="year"></span> Evan Fitzhugh</span>
+  <span class="footer-sep">&middot;</span>
+  <a href="https://github.com/Eitzl" target="_blank" rel="noopener">GitHub</a>
+  <span class="footer-sep">&middot;</span>
+  <a href="mailto:emfitzhu@ucsc.edu">emfitzhu@ucsc.edu</a>
 </footer>
 
 <script>
