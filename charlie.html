@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlie &mdash; Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .photo-grid figure {
+      margin: 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .photo-grid figcaption {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>Charlie</h1>
+  <p>Photos of my dog.</p>
+
+  <hr class="divider" />
+
+  <div class="photo-grid">
+    <figure>
+      <img src="assets/photos/IMG_1767.JPG" alt="Charlie" />
+      <figcaption>Charlie</figcaption>
+    </figure>
+    <!-- Add more photos here: copy the <figure> block above and update src/caption -->
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

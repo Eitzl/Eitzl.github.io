@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biking &mdash; Evan Fitzhugh</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .photo-grid figure {
+      margin: 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .photo-grid figcaption {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>Biking</h1>
+  <p><a href="activities.html">&larr; Back to Activities</a></p>
+
+  <hr class="divider" />
+
+  <p>
+    [Add a description of your mountain biking, favorite trails, bikes, or anything
+    else you'd like to share here.]
+  </p>
+
+  <div class="photo-grid">
+    <!-- Add photos here:
+    <figure>
+      <img src="assets/photos/YOUR_PHOTO.JPG" alt="Caption" />
+      <figcaption>Caption</figcaption>
+    </figure>
+    -->
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Evan Fitzhugh
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
