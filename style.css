@@ -402,6 +402,27 @@ a:hover {
   color: var(--muted);
 }
 
+/* ── Calendar ── */
+.calendar-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.calendar-wrapper iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
+  display: block;
+}
+
 /* ── Status last-updated ── */
 .status-updated {
   font-size: 0.75rem;
