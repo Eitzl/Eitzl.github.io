@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bioinformatics Mastery Roadmap &mdash; Docs &mdash; Evan Fitzhugh</title>
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .doc-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-header h1 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .doc-meta-row {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .doc-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.1rem 0.45rem;
+      color: var(--muted);
+    }
+
+    .back-link {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .doc-embed {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .doc-embed iframe {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">Evan Fitzhugh</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../writings.html">Writings</a></li>
+      <li><a href="../docs.html" class="active">Docs</a></li>
+      <li><a href="../activities.html">Activities</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-dot"></span>
+      <span class="toggle-label">light</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <a class="back-link" href="../docs.html">&larr; Back to Docs</a>
+
+  <div class="doc-header">
+    <h1>Bioinformatics Mastery Roadmap: Single-Cell and Bulk RNA-Seq for Undergraduate Researchers</h1>
+    <div class="doc-meta-row">
+      <span>May 2026</span>
+      <span class="doc-tag">bioinformatics</span>
+      <span class="doc-tag">external resource</span>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="doc-embed">
+    <iframe
+      src="https://claude.site/public/artifacts/6bfb5404-8fc1-40e2-b9eb-2e432ea646e6/embed"
+      title="Bioinformatics Mastery Roadmap: Single-Cell and Bulk RNA-Seq for Undergraduate Researchers"
+      height="600"
+      frameborder="0"
+      allow="clipboard-write"
+      allowfullscreen
+    ></iframe>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; <span id="year"></span> Evan Fitzhugh</span>
+  <span class="footer-sep">&middot;</span>
+  <a href="https://github.com/Eitzl" target="_blank" rel="noopener">GitHub</a>
+  <span class="footer-sep">&middot;</span>
+  <a href="mailto:emfitzhu@ucsc.edu">emfitzhu@ucsc.edu</a>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writings &mdash; Evan Fitzhugh</title>
+  <title>Docs &mdash; Evan Fitzhugh</title>
   <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .post-list {
+    .doc-list {
       list-style: none;
     }
 
-    .post-item {
+    .doc-item {
       padding: 1.1rem 0;
       border-bottom: 1px solid var(--border);
       display: flex;
@@ -20,50 +20,46 @@
       gap: 1rem;
     }
 
-    .post-item:first-child {
+    .doc-item:first-child {
       border-top: 1px solid var(--border);
     }
 
-    .post-title {
+    .doc-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .doc-title {
       font-size: 0.975rem;
       color: var(--text);
       text-decoration: none;
     }
 
-    .post-title:hover {
+    .doc-title:hover {
       color: var(--accent);
     }
 
-    .post-date {
+    .doc-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .doc-date {
       font-size: 0.78rem;
       color: var(--muted);
       white-space: nowrap;
     }
 
-    .reading-card {
-      border-left: 3px solid var(--accent);
+    .doc-tag {
+      display: inline-block;
+      font-size: 0.7rem;
       background: var(--bg-card);
-      border-radius: 0 6px 6px 0;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .reading-card .rc-title {
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 0.1rem;
-    }
-
-    .reading-card .rc-author {
-      font-size: 0.82rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.1rem 0.45rem;
       color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .reading-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 0;
+      margin-top: 0.2rem;
     }
   </style>
 </head>
@@ -76,8 +72,8 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="docs.html">Docs</a></li>
-      <li><a href="writings.html" class="active">Writings</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="docs.html" class="active">Docs</a></li>
       <li><a href="activities.html">Activities</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -89,25 +85,21 @@
 </nav>
 
 <main>
-  <h1>Writings</h1>
-  <p>Essays and notes on history, politics, and related topics.</p>
+  <h1>Docs</h1>
+  <p>Public documents and resources — not necessarily my own writing.</p>
 
   <hr class="divider" />
 
-  <h3>Essays</h3>
-  <p style="color: var(--muted); font-size: 0.925rem;">
-    Essays are on the way. Check back soon.
-  </p>
-
-  <hr class="divider" />
-
-  <h3>Currently Reading</h3>
-
-  <div class="reading-card">
-    <div class="rc-title">Glider Flying Handbook</div>
-    <div class="rc-author">Federal Aviation Administration (FAA)</div>
-    <p>The FAA's authoritative guide to glider and soaring flight — covers aerodynamics, meteorology, and technique. Free to read and a good entry point for anyone curious about unpowered flight.</p>
-  </div>
+  <ul class="doc-list">
+    <li class="doc-item">
+      <div class="doc-meta">
+        <a class="doc-title" href="docs/bioinformatics-roadmap.html">Bioinformatics Mastery Roadmap: Single-Cell and Bulk RNA-Seq</a>
+        <span class="doc-desc">A structured learning roadmap for undergraduate researchers entering single-cell and bulk RNA-seq analysis.</span>
+        <span class="doc-tag">bioinformatics</span>
+      </div>
+      <span class="doc-date">May 2026</span>
+    </li>
+  </ul>
 </main>
 
 <footer>
